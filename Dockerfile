@@ -4,6 +4,6 @@ RUN nix-env -iA nixpkgs.git
 RUN git clone https://github.com/functionally/mantis.git
 
 WORKDIR mantis
-RUN nix-build -A mantis.components.exes.mantis -o build
+RUN nix-build -A mantra.components.exes.mantra -o build
 
-RUN find /nix/store/ -name mantis -type f -exec cp {} /usr/bin \;
+RUN find /nix/store/ -name mantra -type f -exec cp {} /usr/bin \;
